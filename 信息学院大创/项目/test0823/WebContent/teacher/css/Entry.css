@@ -1,0 +1,69 @@
+body,div,dl,dt,p,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,th,td{ 
+	padding:0; 
+	margin:0 auto; 
+	font-family:"微软雅黑";
+}
+.wapbg{ 
+	height:446px;
+}
+.wap{ 
+	margin:0 auto; 
+	width:955px;
+}
+.top{ 
+	height:150px; 
+	padding-left:150px; 
+}
+.middle{ 
+	height:296px;
+	position:relative; 
+	width:955px;
+}
+.dl{
+	width:500px;height:250px;
+	padding-top:30px;
+	background:url(../img/dl_background.png);
+}
+.logintitle{
+	font-size:24px;
+	color:#333;
+	padding-bottom: 20px;
+	padding-left: 70px;
+}
+.dlmi{
+	float:left; 
+	width:312px; 
+	line-height:45px;
+	font-size:17px;
+	color:#333;
+	position:absolute;
+	top:70px;
+}
+.input {  
+	height:28px;
+	border:1px solid #DDDDDD;
+	padding-left: 3px;
+}
+.dlj{ 
+	color:#666;
+	position:absolute;
+	top:180px;left:77px;width: 113px;
+}
+.inputSmt{
+	height:45px;width:45px;
+	font-size:16px; 
+	cursor: pointer;
+}
+.end{
+	position:absolute;
+	font-size:15px;
+	color:#999;width:809px;left: 160px;top: 290px;
+}
+.copyright{
+	color:#999;
+	text-decoration:none;
+}
+.trclass{
+	height:40px;
+	text-align:right;
+}

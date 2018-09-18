@@ -1,0 +1,119 @@
+*{
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+html,body{height:100%}
+
+#container{
+	margin: 0 auto; 
+	width: 100%; 
+	min-height: 100%;
+	position: relative;
+}
+
+#header{ 
+	width: 960px;
+	height: 80px;
+}
+
+#header img{
+	float: left;
+	width: 455px;
+	height: 52px;
+	margin-top: 10px;
+}
+
+.LoginName{
+	float: right;
+	font-size: 14px;
+}
+
+#main{
+	width: 100%;
+	height:545px;	
+}
+
+#nav{
+	width: 100%;
+	height: 45px;
+	background-color: #4e8f17;	
+    box-shadow:inset 0 3px 3px 0 #3b7519;
+}
+
+.menu li{ 
+	float: initial;
+	padding: 0 25px 0 25px;   
+	list-style: none;   
+	font-weight: bold;
+	display: inline-block;
+	line-height: 46px;
+}
+
+
+a{
+	font-size: 14px;
+}
+
+.menu a:link{
+	color: #fff;
+	text-decoration: none;
+}
+
+.menu a:visited{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.menu li:hover{
+	text-decoration: none;
+	color: #fff;
+	background-color:rgba(255,255,255,0.3);
+}
+
+
+
+.menu a:active{
+	text-decoration: none;
+	color: #a7e970;
+}
+
+
+#content{
+	width: 960px;
+	height:500px;
+	/*margin-top: 50px;*/
+	padding-top: 50px;
+}
+
+.content table{
+	border-color: #FFFFFF;
+}
+
+/*td[class=first]:before{
+	content: "";
+	position: absolute;
+	width: 2px;
+	height:142px;这里需要自己调整，根据td的宽度和高度
+	top:0;
+	left:0;
+	background-color: black;
+	display: block;
+	transform: rotate(-55deg);/*这里需要自己调整，根据线的位置*/
+	/*transform-origin: top;
+}*/
+
+#footer{ 
+	position: absolute;
+	height: 20px;
+	width: 100%;
+	color: #000;
+	text-align: center;
+	letter-spacing: 2px;
+	font-size: 13px;
+	font-family: Microsoft YaHei;
+	/*background-color:bisque;*/
+}
+
+

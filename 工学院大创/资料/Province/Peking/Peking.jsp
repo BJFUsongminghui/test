@@ -1,0 +1,275 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>北京市苗圃分部</title>
+	</head>
+	<style type="text/css">
+		<!--
+		#n li{
+		    	float: left;
+		    	list-style-type: none;
+		    }
+		#n li a{
+		    	color: azure;
+		    	text-decoration: none;
+		    	padding-top: 10px;
+		    	display: block;
+		    	width: 90px;
+		    	height: 30px;
+		    	text-align: center;
+		    	margin-bottom: 20px;
+		    }
+		#n li a:hover
+		    {
+		    	background-color: cornflowerblue;
+		    	color: darkblue;
+		    }
+		.profiletopic{
+		    	font-family: "微软雅黑";
+		    	font-size: 15pt;
+		    	text-align: left;
+		    	text-decoration: underline;
+		    	
+		  }
+		.profile{
+		    	font-family: "微软雅黑";
+		    	font-size: 12pt;
+		    	text-align: justify;
+		    	line-height: 30px;
+		    	white-space: normal;
+		    }
+		
+		a:link {font-family:arial;font-size: 10pt;text-decoration: none;color: azure;}
+		a:hover {font-family: "times new roman"; font-size: 13pt; text-decoration: none; color: darkturquoise;}
+		a:active{font-family: "times new roman"; font-size: 14pt; text-decoration: none; color: cornflowerblue;}
+		
+		.plantbase{
+			border: 1px solid blue;
+			border-radius: 50px;
+			width: 1300px;
+			height: 840px;
+			}
+		-->
+	</style>
+    <body>
+        <!--插入图片logo-->
+	<table width="1300px" border="1px" align="center" cellpadding="0px" cellspacing="1px" >
+			<tr>
+				<td>
+					<img src="../../img/Login/Logo2.jpg"/>
+				</td>
+			</tr>
+		<!--导航栏目-->
+		    <tr height="40px">
+		        <td background="../../img/Login/Horizantal brand.jpg" align="center" id="n">&nbsp;&nbsp;&nbsp;&nbsp;
+		 	    <ul>  
+		 	      <li><a href="${pageContext.request.contextPath}/index.jsp"><font size="3">首页</font></a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		 	      <li><a href="#"><font size="3">网页简介</font></a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		          <li><a href="#"><font size="3">交易须知</font></a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		 	      <li><a href="#"><font size="3">相关技术</font></a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		 	      <li><a href="#"><font size="3">研究方向</font></a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		 	      <li><a href="${pageContext.request.contextPath}\Team_profile.jsp"><font size="3">团队介绍</font></a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		 	      <li><a href="#"><font size="3">合作对象</font></a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		       </ul>
+		        </td>
+		<!--Map profile-->   
+		    </tr>
+		    <tr>
+		    	<td>
+		    		<table width="1300px" height="500px" border="1" cellpadding="15">
+		    			<td width="60%">
+		    				<img src="../../img/Province/Beijing-map.gif" usemap="#Map" border="0" id="Beijingmap">
+		    				<map name="Map">
+                              <area shape="circle" coords="303,172,7" href="#"
+                              	onmouseover="document.getElementById('Beijingmap').src='../../img/Province/Beijing-mapYanqing.gif'"
+                              	onmouseout="document.getElementById('Beijingmap').src='../../img/Province/Beijing-map.gif'">
+                              <area shape="circle" coords="454,217,6" href="#"
+                              	onmouseover="document.getElementById('Beijingmap').src='../../img/Province/Beijing-mapHuairou.gif'"
+                              	onmouseout="document.getElementById('Beijingmap').src='../../img/Province/Beijing-map.gif'">
+                              <area shape="circle" coords="504,205,7" href="#"
+                              	onmouseover="document.getElementById('Beijingmap').src='../../img/Province/Beijing-mapMiyun.gif'"
+                              	onmouseout="document.getElementById('Beijingmap').src='../../img/Province/Beijing-map.gif'">
+                              <area shape="circle" coords="566,270,7" href="#"
+                              	onmouseover="document.getElementById('Beijingmap').src='../../img/Province/Beijing-mapPinggu.gif'"
+                              	onmouseout="document.getElementById('Beijingmap').src='../../img/Province/Beijing-map.gif'">
+                              <area shape="circle" coords="359,242,7" href="#"
+                              	onmouseover="document.getElementById('Beijingmap').src='../../img/Province/Beijing-mapChangping.gif'"
+                              	onmouseout="document.getElementById('Beijingmap').src='../../img/Province/Beijing-map.gif'">
+                              <area shape="circle" coords="456,268,8" href="#"
+                              	onmouseover="document.getElementById('Beijingmap').src='../../img/Province/Beijing-mapShunyi.gif'"
+                              	onmouseout="document.getElementById('Beijingmap').src='../../img/Province/Beijing-map.gif'">
+                              <area shape="circle" coords="327,320,7" href="#"
+                              	onmouseover="document.getElementById('Beijingmap').src='../../img/Province/Beijing-mapMentougou.gif'"
+                              	onmouseout="document.getElementById('Beijingmap').src='../../img/Province/Beijing-map.gif'">
+                              <area shape="circle" coords="457,334,7" href="#"
+                              	onmouseover="document.getElementById('Beijingmap').src='../../img/Province/Beijing-mapTongzhou.gif'"
+                              	onmouseout="document.getElementById('Beijingmap').src='../../img/Province/Beijing-map.gif'">
+                              <area shape="circle" coords="379,381,8" href="#"
+                              	onmouseover="document.getElementById('Beijingmap').src='../../img/Province/Beijing-mapDaxing.gif'"
+                              	onmouseout="document.getElementById('Beijingmap').src='../../img/Province/Beijing-map.gif'">
+                              <area shape="circle" coords="334,377,8" href="#"
+                              	onmouseover="document.getElementById('Beijingmap').src='../../img/Province/Beijing-mapFangshan.gif'"
+                              	onmouseout="document.getElementById('Beijingmap').src='../../img/Province/Beijing-map.gif'">
+                              <area shape="poly" coords="391,321,395,315,399,323,407,325,401,331,401,337,394,333,388,337,387,327,383,322,390,321" 
+                              	href="#" 
+                              	onmouseover="document.getElementById('Beijingmap').src='../../img/Province/Beijing-mapBeijingshi.gif'"
+                              	onmouseout="document.getElementById('Beijingmap').src='../../img/Province/Beijing-map.gif'">
+                            </map>
+		    			</td>
+		    			<td width="40%">
+		    				<font class="profiletopic">简介:</font><br />
+		    				<font class="profile"><p>北京地区散布着大大小小近百个苗木基地及苗圃交易所。本网站建立初期采集的
+		    			            苗木数据以小汤山苗木基地和后八家苗木基地为多。北京地区常用的苗木为绿化苗木
+		    			            绿化苗木最常使用于城市园林绿化中如:城区绿化、住宅区绿化、公路绿化、荒山绿化、河堤绿化等。按
+                                                                                    照现代人的理解，园林不只是作为游憩之用，同时也具有保护和改善环境的功能。
+                                                                                    植物可以吸收二氧化碳，放出氧气，净化空气;能够在一定程度上吸收有害气体和吸附尘埃，
+                                                                                    减轻污染;可以调节空气的温度、湿度，改善小气候;还有减弱噪声和防风、防火等防护作用。
+		    			            苗木是具有根系和苗干的树苗。凡在苗圃中培育的树苗不论年龄大小，
+		    				在未出圃之前，都称苗木。苗木种类:实生苗、营养繁殖苗、移植苗、留床苗。
+		    				苗木还可以按照乔灌木分类，一般在北方乔木苗比较多，南方灌木比较多，
+		    				这主要是由于生长气候所引起的。</p></font>
+		    			</td>
+		    		</table>
+		    	</td>  	
+		    </tr>
+		    <tr>
+		    	<td background="../../img/Index/Horizantal brand2.jpg">
+		    		<marquee><font size="3pt" color="azure">按首字母寻找苗圃基地或直接在地图上点击相应地区</font></marquee>
+		    	</td>
+		    </tr>
+		    <tr>
+		    	<td background="../../img/Index/Horizantal brand3.jpg" height="40px">
+		    		<font color="aliceblue">&nbsp;&nbsp;&nbsp;&nbsp;按字母查找：</font>
+		    		<font class="a">
+		    		<a href="#">A</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		    		<a href="#">B</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		    		<a href="#">C</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		    		<a href="#">D</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		    		<a href="#">E</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		    		<a href="#">F</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		    		<a href="#">G</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		    		<a href="#">H</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		    		<a href="#">I</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		    		<a href="#">J</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		    		<a href="#">K</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		    		<a href="#">L</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		    		<a href="#">M</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		    		<a href="#">N</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		    		<a href="#">O</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		    		<a href="#">P</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		    		<a href="#">Q</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		    		<a href="#">R</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		    		<a href="#">S</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		    		<a href="#">T</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		    		<a href="#">U</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		    		<a href="#">V</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		    		<a href="#">W</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		    		<a href="#">X</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		    		<a href="#">Y</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		    		<a href="#">Z</a> 
+		    		</font>
+		    	</td>
+		    </tr>
+		    <tr>
+		    	<td>
+		    		<div class="plantbase">
+		    			<table width="1300px" height="50px"><!--Blank space--></table>
+		    			<table width="1200px" height="740px" border="0px" align="center" cellpadding="5px">
+		    				<tr>
+		    					<td width="200px" height="160px">
+		    						<a href="${pageContext.request.contextPath}/Province/Peking/Plant's_nursery/Xiaotangshan/Xiaotangshan.jsp"><img src="../../img/Province/XTS.jpg" /></a>
+		    					</td>
+		    					<td width="200px" height="160px">
+		    						1
+		    					</td>
+		    					<td width="200px" height="160px">
+		    						1
+		    					</td>
+		    					<td width="200px" height="160px">
+		    						1
+		    					</td>
+		    					<td width="200px" height="160px">
+		    						1
+		    					</td>
+		    					<td width="200px" height="160px">
+		    						1
+		    					</td>		    					
+		    				</tr>
+		    				<tr>
+		    					<td width="200px" height="160px">
+		    						1
+		    					</td>
+		    					<td width="200px" height="160px">
+		    						1
+		    					</td>
+		    					<td width="200px" height="160px">
+		    						1
+		    					</td>
+		    					<td width="200px" height="160px">
+		    						1
+		    					</td>
+		    					<td width="200px" height="160px">
+		    						1
+		    					</td>
+		    					<td width="200px" height="160px">
+		    						1
+		    					</td>		    					
+		    				</tr>
+		    				<tr>
+		    					<td width="200px" height="160px">
+		    						1
+		    					</td>
+		    					<td width="200px" height="160px">
+		    						1
+		    					</td>
+		    					<td width="200px" height="160px">
+		    						1
+		    					</td>
+		    					<td width="200px" height="160px">
+		    						1
+		    					</td>
+		    					<td width="200px" height="160px">
+		    						1
+		    					</td>
+		    					<td width="200px" height="160px">
+		    						1
+		    					</td>		    					
+		    				</tr>
+		    				<tr>
+		    					<td width="200px" height="160px">
+		    						1
+		    					</td>
+		    					<td width="200px" height="160px">
+		    						1
+		    					</td>
+		    					<td width="200px" height="160px">
+		    						1
+		    					</td>
+		    					<td width="200px" height="160px">
+		    						1
+		    					</td>
+		    					<td width="200px" height="160px">
+		    						1
+		    					</td>
+		    					<td width="200px" height="160px">
+		    						1
+		    					</td>		    					
+		    				</tr>
+		    			</table>
+		    		</div>		    		
+		    	</td>
+		    </tr>
+		    <!--项目组、联系方式、所在院校-->
+		    <tr>
+			    <td background="../../img/Province/Horizantal brand bottom.jpg" height="168px">&nbsp;&nbsp;&nbsp;&nbsp;
+					<font color="aliceblue">项目组:苗木盘点设备及苗圃综合管理云平台</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<font color="aliceblue">联系邮箱：Plantservice@163.com</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<font color="aliceblue">所属院校：北京林业大学</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</td>
+			</tr>
+		</table>
+    </body>
+</html>

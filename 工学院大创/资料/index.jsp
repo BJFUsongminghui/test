@@ -1,0 +1,586 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>苗圃综合管理云平台</title>
+		<style>
+			<!-- 
+			#box {
+				width: 1310px;
+				margin: 0 auto;
+			}
+			.searchbrand
+			{
+				font-family: "微软雅黑";
+				font-size: 12pt;
+				color: azure;
+			}
+			
+			.h1 {
+				font-family: "黑体";
+				font-size: 20px;
+				font-weight: bold;
+			}
+			
+			.marquee {
+				font-family: "微软雅黑";
+				font-size: 10px;
+			}
+			
+			.bottomwords {
+				font-family: "微软雅黑";
+				font-size: small;
+			}
+			
+			.bg {
+				background: url('img/Indexbg.jpg');
+			}
+			
+			
+			.topic {
+				font-family: "仿宋";
+				font-size: 25px;
+			}
+			
+			#Layer {
+				border: 3px;
+				width: 100%;
+				height: 100%;
+			}
+			
+			#n li {
+				float: left;
+				list-style-type: none;
+			}
+			
+			#n li a {
+				color: azure;
+				text-decoration: none;
+				display: block;
+				width: 90px;
+				height: 30px;
+				text-align: center;
+				margin-bottom: 20px;
+			}
+			
+			#n li a:hover {
+				background-color: cornflowerblue;
+				color: darkblue;
+			}
+			
+			#left {
+				background-color: azure;
+				border: 0px solid cadetblue;
+				width: 300px;
+				height: 1150px;
+				float: left;
+			}
+			
+			.left1
+			{
+				background-image: url('img/Index/Left1.jpg');
+				background-size: 100% 100%;
+				border: 0px solid cadetblue;
+				width: 300px;
+				height: 370px;
+				float: left;
+			}
+			.left2
+			{
+				background-image: url('img/Index/Left2.jpg');
+				background-size: 100% 100%;
+				border: 0px ;
+				width: 300px;
+				height: 780px;
+				float: left;
+			}
+			#right1 {
+				background-color: azure;
+				border: 0px solid cadetblue;
+				width: 1000px;
+				height: 850px;
+				float: left;
+			}
+			
+			#right2 {
+				background-color: azure;
+				border: 0px solid cadetblue;
+				width: 1000px;
+				height: 300px;
+				float: left;
+				border-radius: 10px;
+			}
+			
+			#top1 {
+				background-color: azure;
+				border: 1px solid cadetblue;
+				width: 1310px;
+				float: left;
+			}
+			
+			#top2 {
+				border: 1px solid cadetblue;
+				width: 1310px;
+				float: left;
+			}
+			
+			#bottom {
+				border: 0px solid cadetblue;
+				width: 1310px;
+				height: 168px;
+				float: left;
+			}
+			
+			
+			
+			.horizontal1 {
+				background-color: azure;
+				border: 0px solid cadetblue;
+				width: 370px;
+				height: 90px;
+				float: left;
+			}
+			
+			.horizontal2 {
+				background-color: azure;
+				border: 0px solid cadetblue;
+				width: 497px;
+				height: 90px;
+				float: left;
+			}
+			
+			.horizontal3 {
+				background-color: azure;
+				border: 0px solid cadetblue;
+				width: 433px;
+				height: 90px;
+				float: left;
+			}
+			
+			#topic li {
+				float: left;
+				list-style-type: none;
+			}
+			
+			#topic li a {
+				color: azure;
+				text-decoration: none;
+				padding-top: 10px;
+				display: block;
+				width: 90px;
+				height: 30px;
+				text-align: center;
+				margin-bottom: 20px;
+			}
+			
+			#topic li a:hover {
+				background-color: cornflowerblue;
+				color: darkblue;
+			}
+			
+			.news {
+				font-family: "楷体";
+				font-size: 10px;
+				position: absolute;
+			}
+			-->
+		</style>
+		<style type="text/css">
+			<!--
+			ul{
+				font-family: "微软雅黑";
+				font-size: 16px;
+				color: dimgrey;
+				list-style-type: circle;
+				line-height: 35px;
+				text-indent: 22px;
+				
+			}
+			a:link{
+				font-family: "微软雅黑";
+				font-size: 16px;
+				color: dimgrey;
+		
+			}
+			a:hover{
+				font-family: "微软雅黑";
+				font-size: 17px;
+				font-weight: bold;
+				text-decoration: none;
+				
+			}
+			a:active{
+				font-family: "微软雅黑";
+				font-size: 17px;
+				font-weight: bold;			
+				text-decoration: none;	
+			}
+			.newstheme{
+				font-family: "楷体";
+				text-decoration: none;
+				font-size: 16pt;
+			}
+			input.button {
+				border: 1 solid #003399;
+				color: azure;
+				font-family: "微软雅黑";
+				font-size: 9pt;
+				font-style: normal;
+				font-weight: normal;
+				height: 30px;
+				width: 70px;
+				line-height: normal;
+				background-color: royalblue;
+			}
+			.asideband{
+				background-image: url('img/Index/Aside theme band.gif');
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+			}
+			.asidefont{
+				font-family:"微软雅黑";
+				font-size: 15pt;
+				color: royalblue;
+				font-weight: bold;
+			}
+			-->
+		</style>
+	</head>
+
+	<body>
+		<div id="box">
+			<!--logo...-->
+			<div id="top1">
+				<div class="horizontal1"><img src="img/Index/Logo.jpg"></div>
+				<div class="horizontal2"><img src="img/Index/Service Promise.jpg"></div>
+				<div class="horizontal3"><img src="img/Index/About us.jpg"></div>
+			</div>
+			<!--topic...-->
+			<div id="top2">
+				<table width="1310px" border="0px" align="center" cellpadding="0px" cellspacing="1px" background="img/Login/Horizantal brand.jpg">
+					<tr height="40px">
+						<td align="center" id="n">&nbsp;&nbsp;&nbsp;&nbsp;
+							<ul>
+								<li>
+									<a href="index.jsp">
+										<font size="3">首页</font>
+									</a>
+								</li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<li>
+									<a href="#">
+										<font size="3">网页简介</font>
+									</a>
+								</li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<li>
+									<a href="#">
+										<font size="3">交易须知</font>
+									</a>
+								</li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<li>
+									<a href="#">
+										<font size="3">相关技术</font>
+									</a>
+								</li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<li>
+									<a href="#">
+										<font size="3">研究方向</font>
+									</a>
+								</li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<li>
+									<a href="Team_profile.jsp">
+										<font size="3">团队介绍</font>
+									</a>
+								</li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<li>
+									<a href="#">
+										<font size="3">合作对象</font>
+									</a>
+								</li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							</ul>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="left" class="aside">
+			<div class="left1">
+				<table width="300px" height="374px" border="0px" cellpadding="10px">
+					<tr>
+						<td width="100px" valign="top" height="72px">
+							
+						</td>
+					</tr>
+					<tr>
+						<td width="100px" valign="top">
+							<form name="signin" action="index.jsp" method="post">
+								<br /><br />
+								<font>账号：</font>
+								<input type="text" maxlength="19" size="20" value="" name="name" id="name" /><br /><br />
+								<font>密码：</font>
+								<input type="password" maxlength="19" size="20" value="" name="password" id="password"/>
+								<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<input type="button" class="button"  value="登入" />
+								<br /><br /><font>无账号？<a href="${pageContext.request.contextPath}/Signup.jsp">点击注册</font>
+							</form>
+							
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="left2">
+				<table width="270px" height="780px" border="0px" cellpadding="30px" align="center">
+					<tr>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="asideband">
+							&nbsp;&nbsp;&nbsp;<a href="#"><font class="asidefont">联系信箱</font></a>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="asideband">
+							&nbsp;&nbsp;&nbsp;<a href="Info_perfection.jsp"><font class="asidefont">完善信息</font></a>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="asideband">
+							&nbsp;&nbsp;&nbsp;<a href="#"><font class="asidefont">上网记录</font></a>
+						</td>
+						<tr>
+						<td></td>
+					</tr>
+					</tr>
+					<tr>
+						<td class="asideband">
+							&nbsp;&nbsp;&nbsp;<a href="#"><font class="asidefont">交易查询</font></a>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+					</tr>
+					
+					<tr>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+			</div>
+			<div id="right1">
+			<!--Search-->
+				<table width="1000px" border="0px" cellspacing="1px">
+					<tr>
+						<td height="40px">
+							<table border="1px" width="100%" background="img/Index/Search band.jpg">
+							<tr height="30px" align="center">
+								<td width="300px">
+									<form name="province" action="index.jsp" method="post">
+										<font class="searchbrand">省份</font>
+										<select name="Province">
+											<option value="北京">北京</option>
+											<option value="上海">上海</option>
+											<option value="天津">天津</option>
+											<option value="重庆">重庆</option>
+											<option value="河北">河北</option>
+											<option value="山西">山西</option>
+											<option value="辽宁">辽宁</option>
+											<option value="吉林">吉林</option>
+											<option value="黑龙江">黑龙江</option>
+											<option value="江苏">江苏</option>
+											<option value="浙江">浙江</option>
+											<option value="安徽">安徽</option>
+											<option value="福建">福建</option>
+											<option value="江西">江西</option>
+											<option value="山东">山东</option>
+											<option value="河南">河南</option>
+											<option value="湖南">湖南</option>
+											<option value="广东">广东</option>
+											<option value="海南">海南</option>
+											<option value="四川">四川</option>
+											<option value="贵州">贵州</option>
+											<option value="云南">云南</option>
+											<option value="陕西">陕西</option>
+											<option value="甘肃">甘肃</option>
+											<option value="青海">青海</option>
+											<option value="台湾">台湾</option>
+											<option value="广西壮族自治区">广西壮族自治区</option>
+											<option value="西藏自治区">西藏自治区</option>
+											<option value="宁夏回族自治区">宁夏回族自治区</option>
+											<option value="新疆维吾尔自治区">新疆维吾尔自治区</option>
+											<option value="内蒙古自治区">内蒙古自治区</option>
+										</select>
+									</form>
+								</td>
+								<td width="300px">
+									<form name="province" action="index.jsp" method="post">
+										<font class="searchbrand">所在市/地区：</font>
+										<select name="Province">
+											<option value="海淀区">海淀区</option>
+											<option value="朝阳区">朝阳区</option>
+											<option value="房山区">房山区</option>
+											<option value="昌平区">昌平区</option>
+										</select>
+									</form>
+								</td>
+								<td width="300px">
+									<form name="province" action="index.jsp" method="post">
+										<font class="searchbrand">所在区/镇/乡：</font>
+										<select name="Province">
+											<option value="兴庆区">兴庆区</option>
+											<option value="金凤区">金凤区</option>
+											<option value="西夏区">西夏区</option>
+										</select>
+									</form>
+								</td>
+								<td width="100px" valign="middle">
+									<input name="search" type="button" value="搜索" />
+									</form>
+								</td>
+							</tr>
+						    </table>
+						</td>
+					</tr>
+					<tr><!--Marquee-->
+						<td background="img/Index/Horizantal brand2.jpg" height="30px" width="999px">
+						<marquee direction="left" behavior="alternate">
+							<font color="aliceblue" class="float">在此输入地区以查询您需要的苗圃信息</font>
+						</marquee>
+					    </td>
+					</tr>
+					<tr>
+						<td>
+							<table width="1000px" height="700px" border="0px">
+								<tr>
+									<td>
+                                        <!--Map China-->
+										<img src="img/Index/Chinese Map.jpg" width="1000px" height="760px" usemap="#Map" border="1px" id="Chinesemap">
+						                  <map name="Map">
+						                    <area shape="circle" coords="679,360,5" href="Province/Peking/Peking.jsp" 
+						                    	onmouseover="document.getElementById('Chinesemap').src='img/Index/Chinese Map Beijing.jpg'"
+						                    	onmouseout="document.getElementById('Chinesemap').src='img/Index/Chinese Map.jpg'">
+						                    <area shape="circle" coords="692,378,4" href="#">
+						                    <area shape="circle" coords="759,538,4" href="#">
+						                    <area shape="circle" coords="529,568,5" href="#">
+                                          </map>
+                                    </td>
+								</tr>
+							</table>
+						</td>
+					</tr>					
+				</table>
+			</div>
+			<!--News-->
+			<div id="right2">
+				<table width="1010px" height="297px" border="0px">
+					<tr>
+						<td background="img/Index/News1.jpg">
+						<p>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font class="newstheme">苗圃资讯</font>
+						</p>
+							<ul class="ul">
+								<a href="#" style="color: darkslategrey;text-decoration: none;">
+									<li>
+										<font>2018年各大城市苗圃信息</font>
+									</li>
+								</a>
+								<a href="#" style="color: darkslategrey;text-decoration: none;">
+									<li>
+										<font>网站最新交易记录</font>
+									</li>
+								</a>
+								<a href="#" style="color: darkslategrey;text-decoration: none;">
+									<li>
+										<font>小汤山苗圃树木测胸径技术</font>
+									</li>
+								</a>
+								<a href="#" style="color: darkslategrey;text-decoration: none;">
+									<li>
+										<font>后八家苗圃树木信息统计相关技术</font>
+									</li>
+								</a>
+								<a href="#" style="color: darkslategrey;text-decoration: none;">
+									<li>
+										<font>退耕还林还草最新进展</font>
+									</li>
+								</a>
+								<a href="#" style="color: darkslategrey;text-decoration: none;">
+									<li>
+										<font>杭州着力提升长江经济带的“绿色颜值”和“绿色实力”</font>
+									</li>
+								</a>
+							</ul>
+						</td>
+						<td width="500px" background="img/Index/News1.jpg">
+							<p>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font class="newstheme">科技资讯</font>
+								</p>
+							<ul class="ul">
+								
+								<a href="#" style="color: darkslategrey;text-decoration: none;">
+									<li>
+										<font>苗木胸径图像处理</font>
+									</li>
+								</a>
+								<a href="#" style="color: darkslategrey;text-decoration: none;">
+									<li>
+										<font>机器视觉技术</font>
+									</li>
+								</a>
+								<a href="#" style="color: darkslategrey;text-decoration: none;">
+									<li>
+										<font>小汤山苗圃树木测胸径技术</font>
+									</li>
+								</a>
+								<a href="#" style="color: darkslategrey;text-decoration: none;">
+									<li>
+										<font>后八家苗圃树木信息统计相关技术</font>
+									</li>
+								</a>
+								<a href="#" style="color: darkslategrey;text-decoration: none;">
+									<li>
+										<font>环保信息网</font>
+									</li>
+								</a>
+								<a href="#" style="color: darkslategrey;text-decoration: none;">
+									<li>
+										<font>转基因技术在苗木上的应用</font>
+									</li>
+								</a>
+							</ul>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!--项目组、联系方式、所在院校-->
+			<div id="bottom">&nbsp;&nbsp;&nbsp;&nbsp;
+				<table width="1310px" border="0px" align="center" cellpadding="0px" cellspacing="1px" height="168px">
+					<tr>
+						<td background="img/Index/Horizantal brand bottom.jpg" width="1310px" height="164px">
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<font color="aliceblue" size="1">项目组:苗木盘点设备及苗圃综合管理云平台</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<font color="aliceblue" size="1">联系邮箱：Plantservice@163.com</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<font color="aliceblue" size="1">所属院校：北京林业大学</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						</td>
+					</tr>
+				</table>
+
+			</div>
+		</div>
+	</body>
+
+</html>
